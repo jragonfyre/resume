@@ -1,0 +1,50 @@
+\documentclass[11pt]{article}
+
+\usepackage{fullpage}
+\usepackage{fancyhdr}
+\usepackage{textcase}
+\usepackage{relsize}
+
+\setlength{\headheight}{33.4pt}
+\pagestyle{fancy}
+\fancyhead[l]{\small (412) 728-8774\\ jason.schuchardt@yale.edu}
+\fancyhead[c]{\huge \textbf{Jason Schuchardt}}
+\fancyhead[r]{\scriptsize \it Yale University\\
+206 Elm Street, PO Box 200221\\
+New Haven, CT 06520
+}
+
+\newcommand{\myrule}[1][.9]{
+\par\vspace*{-.65\baselineskip}\noindent \hfil\rule{#1\textwidth}{0.4pt}\hfil\par
+}
+\newcommand{\mysechead}[1]{
+\par\noindent {\large \bf \MakeTextUppercase{#1}}
+}
+
+\begin{document}
+\vspace*{-7.0pt}
+\mysechead{Education}
+\myrule
+
+\noindent
+\textbf{Undergraduate, Yale University}\hfill Fall 2014-Present \\
+
+\mysechead{Technical Skills}
+\myrule
+
+\noindent
+\begin{tabular}{ll}
+Languages & C$^\sharp$, Java, Ruby, Haskell, Javascript, C,
+C\raise.30ex\hbox{\smaller{\verb!++!}}, \LaTeX, Scheme, Perl\\
+Frameworks, DSLs, \& APIs & Rails, Yesod, HTML, JSON, CSS, XML\\
+Operating Systems & Linux, Windows\\
+Tools & Git, Vim, Emacs, bash, Eclipse, cmd.exe \\
+\end{tabular}
+
+\mysechead{Work Experience and Volunteering}
+\myrule
+
+\noindent
+
+
+\end{document}
