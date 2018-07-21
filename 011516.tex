@@ -1,0 +1,119 @@
+\documentclass[11pt]{article}
+
+\usepackage{fancyhdr}
+\usepackage{textcase}
+\usepackage{relsize}
+\usepackage{amsmath}
+\usepackage{changepage}
+\usepackage{setspace}
+\usepackage[margin=1in, bottom=0in]{geometry}
+
+\setlength{\headheight}{2pt}
+\pagestyle{fancy}
+\fancyhead[l]{\small (412) 728-8774\\ jason.schuchardt@yale.edu}
+\fancyhead[c]{\huge \textbf{Jason Schuchardt}}
+\fancyhead[r]{\scriptsize \it Yale University\\
+206 Elm Street, PO Box 200221\\
+New Haven, CT 06520
+}
+\fancyfoot{}
+
+\newcommand{\myrule}[1][.9]{\par\vspace*{-.65\baselineskip}\noindent\hfil\rule{#1\textwidth}{0.4pt}\hfil\par}
+\newcommand{\mysechead}[1]{\par\noindent {\large \bf \MakeTextUppercase{#1}}}
+\newcommand{\resentry}[2]{\hspace*{.5em}{\bf{#1}}\hfill{\it{#2}}}
+\newcommand{\resbody}[1]{\begin{adjustwidth}{1em}{0.5em}{\fontsize{10pt}{1em}\selectfont\it#1\par}\end{adjustwidth}}
+
+\begin{document}
+\vspace*{-7.0pt}
+\mysechead{Education}
+\myrule
+
+\noindent
+\resentry{Undergraduate, Yale University}{Fall 2014-Present}
+\resbody{Expected Date of Graduation\hfill May 2018}\vspace{-3pt}
+\resbody{Current GPA: 3.93}\vspace{-5pt}
+\resentry{High School, Graduated Cum Laude from Sewickley Academy}{Fall 2010-Spring 2014}
+\resbody{Final Unweighted GPA: 3.86}
+\vspace*{\baselineskip}
+
+\mysechead{Technical Skills}
+\myrule
+
+\noindent
+\begin{tabular}{ll}
+Languages & C$^\sharp$, Java, Ruby, Haskell, Javascript, C,
+C\raise.30ex\hbox{\smaller{\verb!++!}}, \LaTeX, Scheme, Perl\\
+Frameworks, DSLs, \& APIs & Ruby on Rails, HTML, CSS, Bootstrap, XML, JSON, Yesod\\
+Operating Systems & Linux, Windows\\
+Tools & Git, Vim, Emacs, bash, Eclipse, cmd.exe, Visual Studio \\
+\end{tabular}
+\vspace*{\baselineskip}
+
+\mysechead{Work Experience and Volunteering}
+\myrule
+
+\noindent
+\resentry{Volunteer Web Developer for MMATHS Project}{Fall 2014-Present}
+\resbody{A friend and I wrote a web app using Ruby on Rails to allow other volunteers to
+submit problems for the MMATHS competition. Among other things, I used the MathJax library to
+show problem previews for
+problems written in \LaTeX, and created a page to edit and preview tests.}
+\resentry{Junior Counselor and Counselor at Ross Mathematics Program}{Summer 2014, 15}
+\resbody{I attended the program in Summer 2013. As a top student,
+I was asked to return as a junior counselor. I guided the first years and graded their sets, while
+finishing the sets from my first year. In 2015, I returned as a full counselor to continue
+to help high schoolers discover abstract
+mathematics.}
+\resentry{Volunteer at the Laboratory of Neurocognitive Development (LNCD)}{Spring 2014}
+\resbody{I volunteered for two weeks (60\raise.4ex\hbox{\smaller{+}} hours) at the LNCD at
+the University of Pittsburgh for my senior project. I worked on the database interface for the lab's subject
+information (which was written with Mojolicious, Bootstrap, and AngularJS), a working memory task for a 
+study written in MATLAB, as well as numerous smaller projects involving bash scripting and 
+data visualization with the aid of R.}
+\resentry{Private Math Tutor}{Fall 2013-Spring 2014}\\
+\resentry{Mathcounts Volunteer Coach}{Fall 2010-Spring 2014}\\
+
+\mysechead{Relevant Coursework}
+\myrule
+
+\noindent
+\resentry{Yale University}{Fall 2014-Spring 2015}
+\resbody{Vector Calculus and Linear Algebra I and II (MATH 230,231),
+Mathematical Problem Solving (MATH 199),
+Number Theory (MATH 354),
+Introduction to Abstract Algebra (MATH 350),
+Discrete Mathematics (MATH 244),
+Introduction to Computer Science (CPSC 201),
+Data Structures and Programming Techniques (CPSC 223),
+Systems Programming and Computer Organization (CPSC 323)
+}
+\resentry{University of Pittsburgh}{Fall 2013-Spring 2014}
+\resbody{Mutivariable Calculus, Complex Variables}
+\vspace*{\baselineskip}
+
+\mysechead{Extracurricular Activities and Projects}
+\myrule
+    
+\noindent
+\resentry{High School Programming Club}{Fall 2010-Spring 2014}
+\resbody{President from Fall 2011 to Spring 2014. In the 2013-2014 school year,
+we wrote a video game in $\textup{C}^\sharp$. Since this was an educational project,
+I wrote the physics, graphics, math, and game libraries from scratch starting from
+the .NET Framework and Windows Forms.}
+\resentry{Western PA ARML Math Team Member}{Fall 2008-Spring 2014}\\
+
+\mysechead{Awards and Accomplishments}
+\myrule
+
+\noindent
+\resentry{Putnam Rank 172: (Score: 39)}{December 2014}\\
+\resentry{USAMO Qualifier (Score: 14)}{Spring 2014}\\
+\resentry{High School Senior Math Award}{Spring 2014}\\
+\resentry{High School Senior Computer Science Award}{Spring 2014}\\
+\resentry{Gannon University Programming Contest $1^{\text{st}}$ Place}{Spring 2011}\\
+\resentry{Yale Science \& Engineering Association}{Spring 2011}
+\resbody{Most Outstanding Exhibit in Computer Science, Engineering,
+Physics or Chemistry at the Pittsburgh Regional Science \& Engineering Fair}
+
+\end{document}
+
