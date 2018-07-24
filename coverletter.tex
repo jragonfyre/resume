@@ -1,0 +1,74 @@
+% vim:ft=tex:
+%
+\documentclass[12pt]{letter} % https://en.wikibooks.org/wiki/LaTeX/Letters 
+
+\usepackage{fancyhdr}
+\usepackage{textcase}
+\usepackage{relsize}
+\usepackage{amsmath}
+\usepackage{changepage}
+\usepackage{setspace}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage[margin=1in, bottom=0in]{geometry}
+
+% get rid of bullet separation
+\setlist{nosep} % https://tex.stackexchange.com/questions/10684/vertical-space-in-lists 
+
+%\setlength{\headheight}{2pt}
+\pagestyle{plain}
+
+\newcommand{\email}[1]{\href{mailto:#1}{#1}}
+
+
+% Letter stuff
+\signature{Jason Schuchardt}
+\address{4000 Randall Avenue \\ St.\ Louis Park MN, 55416}
+
+% Specific template things
+
+\newcommand{\companyname}{Some Company/Lab, TODO}
+\newcommand{\companyinfo}{\companyname \\ Company Street Address, TODO \\ Company City and Zip, TODO}
+\newcommand{\recruitername}{Recruiter Name, TODO}
+\newcommand{\jobdiscoveredon}{TODO}
+\newcommand{\positionname}{TODO}
+
+\begin{document}
+
+
+\begin{letter}{}
+\companyinfo
+
+\opening{Dear \recruitername,}
+
+My name is Jason Schuchardt. I'm excited to be applying for the open \positionname\ role at \companyname.
+After reviewing your job description, I am confident that I have the necessary skills and expertise to 
+succeed in the position. 
+
+I am an adaptable recent college graduate graduating with an M.S.\ in Mathematics from Yale University.
+While working over the summers I have accrued work experience in both research and programming.
+Last summer I worked
+as an undergraduate researcher in mathematics at Yale,
+and the summer before I worked as a lab programmer at the 
+Laboratory of Neurocognitive Development at the University of Pittsburgh. From this experience I have
+acquired valuable technical skills such as (TODO, elaborate on technical skills with reference to the job
+posting). In both my academic and professional life, I have been consistently praised as a quick learner by
+my professors, peers and mentors.
+(TODO is this really necessary xD I feel like it's such bullshit xD particularly
+since you don't hear that from your profs at yale xP) 
+Whether working on academic, extracurricular, or professional projects, I apply proven problem-solving, 
+research, and technical skills, which I hope to use in the capacity of a \positionname at your lab. % TODO
+% change lab to company or organization or whatever is applicable
+
+After reviewing my resume, I hope you will agree that I am the type of competent and competitive candidate 
+you are looking for. I look forward to elaborating on how my specific skills and abilities will benefit your
+organization. Please contact me at (412) 728-8774 or via email at 
+\email{jason.sch@aya.yale.edu} to arrange a convenient meeting time.
+
+Thank you for your consideration, and I look forward to hearing from you soon.
+
+\closing{Sincerely,}
+\end{letter}
+
+
+\end{document}
