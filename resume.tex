@@ -6,11 +6,15 @@
 \usepackage{amsmath}
 \usepackage{changepage}
 \usepackage{setspace}
+\usepackage{enumitem}
 \usepackage[margin=1in, bottom=0in]{geometry}
+
+% get rid of bullet separation
+\setlist{nosep} % https://tex.stackexchange.com/questions/10684/vertical-space-in-lists 
 
 \setlength{\headheight}{2pt}
 \pagestyle{fancy}
-\fancyhead[l]{\small (412) 728-8774\\ jasonsch.yale@gmail.com}
+\fancyhead[l]{\small (412) 728-8774\\ jason.sch@aya.yale.edu}
 \fancyhead[c]{\huge \textbf{Jason Schuchardt}}
 \fancyhead[r]{\scriptsize \it 
 4000 Randall Avenue\\
@@ -20,12 +24,27 @@ St. Louis Park, MN 55416
 
 \newcommand{\myrule}[1][.9]{\par\vspace*{-.65\baselineskip}\noindent\hfil\rule{#1\textwidth}{0.4pt}\hfil\par}
 \newcommand{\mysechead}[1]{\par\noindent {\large \bf \MakeTextUppercase{#1}}}
-\newcommand{\resentry}[2]{\hspace*{.5em}{\bf{#1}}\hfill{\it{#2}}}
+\newcommand\myfill{\leaders\hbox{$\cdot$}\hfill}
+\newcommand{\resentry}[2]{\hspace*{.5em}{\bf{#1}}\myfill{\it{#2}}}
 \newcommand{\resbody}[1]{\begin{adjustwidth}{1em}{0.5em}{\fontsize{10pt}{1em}\selectfont
 \it
 #1\par}\end{adjustwidth}}
+\newcommand\resitem{\item 
+    %\fontsize{10pt}{1em}\selectfont
+    \it
+    }
+\newcommand{\resbodybullets}[1]{
+  {
+    \setstretch{0.9}
+    \begin{itemize}
+        {#1}
+    \end{itemize}
+  }
+}
+
 
 \begin{document}
+\setlength{\parindent}{0pt}
 \vspace*{-7.0pt}
 \mysechead{Education}
 \myrule
@@ -56,35 +75,55 @@ St. Louis Park, MN 55416
 
 \noindent
 \resentry{Undergraduate Math Research with SUMRY at Yale}{Summer 2017}
-\resbody{I worked in a group of three to understand the structure of subdivisions of simplices with local-$h$ 
-zero. Local-$h$ is a combinatorial invariant of subdivisions of simplices introduced by Richard Stanley which
-has received increased attention lately due to connections with intersection cohomology of toric varieties.}
+\resbodybullets{
+  \resitem Worked in a group to understand the structure of subdivisions of simplices with local-$h$ 
+zero. 
+  \resitem Local-$h$ is a combinatorial invariant of subdivisions of simplices introduced by Richard Stanley
+    which is connected with the intersection cohomology of toric varieties.
+  \resitem Paper in progress.
+}
 \resentry{MIT Web Development Contest}{January 2016}
-\resbody{With a friend from MIT I wrote a web app whose purpose was to allow users to form groups and 
-schedule events and activities using Ruby on Rails, Bootstrap, and Angular-js.
+\resbodybullets{
+  \resitem Wrote a web app with a friend from MIT
+  \resitem The app allowed users to form groups and schedule events and activities.
+  \resitem Built with Ruby on Rails, Bootstrap, and Angular-js and used Google's Maps API.
 }
 \resentry{Intern at the Laboratory of Neurocognitive Development}{Summer 2016}
-\resbody{
-  Worked on a variety of daily tasks for the lab. The large project we worked on at the time was updating
-  the database interface. We used an Elm frontend on top of a PostgREST backend.
+\resbodybullets{ 
+  \resitem Worked on a variety of daily tasks for the lab. % TODO: clarify
+  \resitem Used Elm to implement a frontend for a PostgREST backend.
 }
 \resentry{Counselor at the Ross Mathematics Program}{Summer 2015}
-\resbody{
-Mentored high school students as they learned number theory and completed problem sets. 
+\resbodybullets{
+  \resitem Mentored high school students as they learned number theory and completed problem sets. 
 }
 \resentry{Volunteer Web Developer for MMATHS Project}{Fall 2014}
-\resbody{A friend and I volunteered to write a web app using Ruby on Rails to allow other volunteers to
-submit problems for the MMATHS competition. Among many other things, I used the MathJax library to
-show problem previews for
-problems written in \LaTeX, and created a page to edit and preview tests.}
+\resbodybullets{
+  \resitem Volunteered with a friend to write a web app for the Math Majors of America Tournament for High 
+    Schoolers (MMATHS).
+  \resitem The app allowed volunteers to submit problems for the MMATHS competition.
+  \resitem Used Ruby on Rails, Bootstrap, and MathJax.
+}
+%show problem previews for
+%problems written in \LaTeX, and created a page to edit and preview tests.}
 \resentry{Junior Counselor at the Ross Mathematics Program}{Summer 2014}
-\resbody{Having attended as a first year in Summer 2013, I was asked to return as a JC. I worked on finishing
-sets from my first year, graded first years' sets, and helped guide first years without giving
-away answers.}
-\resentry{Volunteer at the Laboratory of Neurocognitive Development}{Spring 2014}
-\resbody{Volunteered for two weeks (60\raise.4ex\hbox{\smaller{+}} hours) at the LNCD at
-the University of Pittsburgh for my senior project. I worked on the database interface for the lab's subject information (which was written with Mojolicious, Bootstrap, and AngularJS), a working memory task for a study written in MATLAB, as well as numerous smaller projects involving mostly bash scripting and data visualization with the aid of R.}
-\resentry{Private Math Tutor}{Fall 2013-Spring 2014}\\
+\resbodybullets{
+  \resitem Attended as a first year in Summer 2013 and was asked to return as a JC. 
+  \resitem Worked on finishing problem sets from the year before,
+  graded first years' sets, and helped guide first years without giving away answers.
+}
+\resentry{Volunteer at the Laboratory of Neurocognitive Development (LNCD)}{Spring 2014}
+\resbodybullets{
+  \resitem Volunteered for two weeks (60\raise.4ex\hbox{\smaller{+}} hours) at the LNCD at
+    the University of Pittsburgh for my senior project.
+  \resitem Worked on the database interface for the lab's subject information, 
+    which was built with Mojolicious, Bootstrap, and AngularJS.
+  \resitem Wrote a working memory task for a study written in MATLAB.
+  \resitem Also worked on 
+    numerous smaller projects involving such things as bash scripting and data visualization
+    with the aid of R.
+}
+%\resentry{Private Math Tutor}{Fall 2013-Spring 2014}\\
 \resentry{Mathcounts Volunteer Coach}{Fall 2010-Spring 2014}\\
 
 \mysechead{Relevant Coursework}
@@ -97,40 +136,47 @@ the University of Pittsburgh for my senior project. I worked on the database int
   %Mathematical Problem Solving (MATH 199),
   %Number Theory (MATH 354),
   %Introduction to Computer Science (CPSC 201),
-  Data Structures and Programming Techniques (CPSC 223)
+  Data Structures and Programming Techniques (CPSC 223),
+  Systems Programming \& Computer Organization (CPSC 323),
+  Design and Analysis of Algorithms (CPSC 365),
+  Discrete Mathematics (MATH 244),
+  Intro to Functional Analysis (MATH 525),
+  Foundations of Algebraic Geometry (MATH 619),
+  Quantum Mechanics I \& II (PHYS 508 \& 608)
 }
 %\resentry{University of Pittsburgh}{Fall 2013-Spring 2014}
 %\resbody{Mutivariable Calculus, Complex Variables}
-\vspace*{\baselineskip}
-
-\mysechead{Extracurricular Activities and Projects}
-\myrule
-    
-\noindent
-\resentry{High School Programming Club}{Fall 2010-Spring 2014}
-\resbody{President from Fall 2011 to Spring 2014. In the 2013-2014 school year,
-we wrote a video game in $\textup{C}^\sharp$. Since this was an educational project,
-I wrote most of the physics, graphics, math, and game libraries from scratch starting from
-the .NET Framework and Windows Forms.}
-\resentry{Western PA ARML}{Fall 2008-Spring 2014}\\
+%\vspace*{\baselineskip}
+%
+%\mysechead{Extracurricular Activities and Projects}
+%\myrule
+    %
+%\noindent
+%\resentry{High School Programming Club}{Fall 2010-Spring 2014}
+%\resbody{President from Fall 2011 to Spring 2014. In the 2013-2014 school year,
+%we wrote a video game in $\textup{C}^\sharp$. Since this was an educational project,
+%I wrote most of the physics, graphics, math, and game libraries from scratch starting from
+%the .NET Framework and Windows Forms.}
+%\resentry{Western PA ARML}{Fall 2008-Spring 2014}\\
 
 \mysechead{Awards and Accomplishments}
 \myrule
 
 \noindent
 %TODO: Putnam
-\resentry{Putnam Competition}{Winter 2014, 2015, 2016, 2017}
+\resentry{Putnam Competition}{December 2014, 2015, 2016, 2017}
 \resbody{
-  Rank or rank group as currently known to me: 172,-,H,171\\
-  (Detailed score and rank information is not released publicly)
+  Highest ranking: Honorable Mention (Top 100 out of 4164 students)
+  %Rank or rank group as currently known to me: 172,-,H,171\\
+  %(Detailed score and rank information is not released publicly)
 }
-\resentry{USAMO Qualifier (Score: 14)}{Spring 2014}\\
-\resentry{High School Senior Math Award}{Spring 2014}\\
-\resentry{High School Senior Computer Science Award}{Spring 2014}\\
+\resentry{USA Mathematical Olympiad Qualifier (Score: 14)}{Spring 2014}\\
+%\resentry{High School Senior Math Award}{Spring 2014}\\
+%\resentry{High School Senior Computer Science Award}{Spring 2014}\\
 %\resentry{Gannon University Programming Contest $1^{\text{st}}$ Place}{Spring 2011}\\
-\resentry{Yale Science \& Engineering Association}{Spring 2011}
-\resbody{Most Outstanding Exhibit in Computer Science, Engineering,
-Physics or Chemistry at the Pittsburgh Regional Science \& Engineering Fair}
+%\resentry{Yale Science \& Engineering Association}{Spring 2011}
+%\resbody{Most Outstanding Exhibit in Computer Science, Engineering,
+%Physics or Chemistry at the Pittsburgh Regional Science \& Engineering Fair}
 
 \end{document}
 
